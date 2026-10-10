@@ -14,38 +14,43 @@ export default function LoginPage() {
   return (
     <div className="grid min-h-screen lg:grid-cols-2">
       {/* Left: brand panel */}
-      <div className="relative hidden flex-col justify-between bg-primary p-10 text-primary-foreground lg:flex">
-        <Link href="/" className="flex items-center gap-2 font-semibold">
-          <Code2 className="h-6 w-6" />
+      <div className="relative hidden flex-col justify-between bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 p-10 text-white lg:flex">
+        {/* Grid overlay */}
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:24px_24px]" />
+        <Link href="/" className="relative flex items-center gap-2.5 font-semibold z-10">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm">
+            <Code2 className="h-4 w-4 text-white" />
+          </div>
           <span className="text-lg">DevAssess</span>
         </Link>
-        <div className="space-y-4">
+        <div className="relative z-10 space-y-4">
           <h2 className="text-3xl font-bold leading-tight">
             Assess developers with real coding challenges.
           </h2>
-          <p className="max-w-md text-primary-foreground/80">
+          <p className="text-white/70">
             Create assessments, invite candidates, and evaluate submissions — all
             in one platform built for engineering teams.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-4 text-sm">
-          <div>
+        <div className="relative z-10 grid grid-cols-3 gap-4 text-sm">
+          <div className="rounded-lg bg-white/10 p-3">
             <p className="text-2xl font-bold">3</p>
-            <p className="text-primary-foreground/70">Distinct roles</p>
+            <p className="text-white/70 text-xs">Distinct roles</p>
           </div>
-          <div>
-            <p className="text-2xl font-bold">MCQ · Code · Written</p>
+          <div className="rounded-lg bg-white/10 p-3">
+            <p className="text-sm font-bold">MCQ · Code · Written</p>
+            <p className="text-white/70 text-xs">Problem types</p>
           </div>
-          <div>
+          <div className="rounded-lg bg-white/10 p-3">
             <p className="text-2xl font-bold">Stripe</p>
-            <p className="text-primary-foreground/70">Credit billing</p>
+            <p className="text-white/70 text-xs">Credit billing</p>
           </div>
         </div>
       </div>
 
       {/* Right: form */}
       <div className="flex items-center justify-center p-6 sm:p-10">
-        <div className="w-full max-w-md space-y-6">
+        <div className="w-full max-w-md space-y-6 animate-in fade-in-0 slide-in-from-bottom-4 duration-500">
           <div className="space-y-2 text-center lg:text-left">
             <Link href="/" className="mb-2 inline-flex items-center gap-2 font-semibold lg:hidden">
               <Code2 className="h-5 w-5 text-primary" />
